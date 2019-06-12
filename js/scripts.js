@@ -46,7 +46,10 @@ $(document).ready(function() {
     function translatePigLatin(inputWord) {
     for (var index = 0; index < vowels.length; index++){
       if(inputWord[0] === vowels[index]){
-      return  userPlatin.join("") +'ay';
+      return  userPlatin.join("") +'way';
+    }
+    else if (constants.includes(userPlatin[userPlatin.length -1])){
+      return userPlatin.join('')+'ay';
     }
     }
   };
